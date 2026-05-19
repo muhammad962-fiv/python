@@ -62,6 +62,9 @@ class ReportRequest(BaseModel):
 # ---- ENDPOINTS ---------------
 # ------------------------------
 
+@app.get("/")
+def home():
+    return {"status": "ok"}
 
 @app.post("/extract_keywords")
 def extract_keywords(req: KeywordRequest):
